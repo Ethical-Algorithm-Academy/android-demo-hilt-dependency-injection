@@ -18,11 +18,13 @@
     <fragment
         android:id="@+id/nav_normal_screen"
         android:name="eu.jobernas.demohilt.ui.normal.NormalWayFragment"
-        android:label="@string/second_fragment_label"
+        android:label="@string/normal_way_screen"
         tools:layout="@layout/fragment_normal_way">
 
         <action
             android:id="@+id/action_normal_to_hilt"
-            app:destination="@id/nav_hilt_screen" />
+            app:destination="@id/nav_hilt_screen"
+            app:popUpTo="@id/nav_hilt_screen"
+            app:popUpToInclusive="true"/>
     </fragment>
 </navigation>
