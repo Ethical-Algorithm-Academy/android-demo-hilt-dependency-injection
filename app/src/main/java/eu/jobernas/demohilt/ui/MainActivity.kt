@@ -1,4 +1,4 @@
-package eu.jobernas.demohilt
+package eu.jobernas.demohilt.ui
 
 import android.os.Bundle
 import com.google.android.material.snackbar.Snackbar
@@ -9,8 +9,11 @@ import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import android.view.Menu
 import android.view.MenuItem
+import dagger.hilt.android.AndroidEntryPoint
+import eu.jobernas.demohilt.R
 import eu.jobernas.demohilt.databinding.ActivityMainBinding
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration

@@ -3,26 +3,26 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/FirstFragment">
+    app:startDestination="@id/nav_hilt_screen">
 
     <fragment
-        android:id="@+id/FirstFragment"
-        android:name="eu.jobernas.demohilt.FirstFragment"
-        android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_first">
+        android:id="@+id/nav_hilt_screen"
+        android:name="eu.jobernas.demohilt.ui.hilt.HiltWayFragment"
+        android:label="@string/hilt_way_screen"
+        tools:layout="@layout/fragment_hilt_way">
 
         <action
-            android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
+            android:id="@+id/action_hilt_to_normal"
+            app:destination="@id/nav_normal_screen" />
     </fragment>
     <fragment
-        android:id="@+id/SecondFragment"
-        android:name="eu.jobernas.demohilt.SecondFragment"
+        android:id="@+id/nav_normal_screen"
+        android:name="eu.jobernas.demohilt.ui.normal.NormalWayFragment"
         android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_second">
+        tools:layout="@layout/fragment_normal_way">
 
         <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
+            android:id="@+id/action_normal_to_hilt"
+            app:destination="@id/nav_hilt_screen" />
     </fragment>
 </navigation>
