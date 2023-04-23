@@ -2,7 +2,8 @@
     <string name="app_name">Demo Hilt</string>
     <string name="action_settings">Settings</string>
     <!-- Strings used for fragments for navigation -->
-    <string name="hilt_way_screen">This Screen uses Hilt dependency injection to load a view model with custom Coroutine Dispatchers</string>
+    <string name="hilt_way_screen">Hilt Way</string>
+    <string name="hilt_way_screen_title">This Screen uses Hilt dependency injection to load a view model with custom Coroutine Dispatchers</string>
     <string name="hilt_go_to_normal_screen">Go to Normal Screen</string>
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>

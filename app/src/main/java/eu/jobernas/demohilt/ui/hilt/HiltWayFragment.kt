@@ -31,7 +31,9 @@ class HiltWayFragment:
                     .navigate(R.id.action_hilt_to_normal)
             }
             firstViewModel.apply {
-
+                onMessageChanged.observe(viewLifecycleOwner) {
+                    hiltResultTextView.text = it
+                }
             }
         }
         return binding.root
@@ -40,6 +42,7 @@ class HiltWayFragment:
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        firstViewModel.executeSomething()
     }
 
     override fun onDestroyView() {

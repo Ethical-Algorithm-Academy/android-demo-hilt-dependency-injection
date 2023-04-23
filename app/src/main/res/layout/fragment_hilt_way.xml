@@ -7,20 +7,37 @@
     android:layout_height="match_parent"
     tools:context=".ui.hilt.HiltWayFragment">
 
-    <TextView
-        android:id="@+id/hilt_to_normal_title_text_view"
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/hilt_title_text_view"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="32dp"
-        android:text="@string/hilt_way_screen"
+        android:text="@string/hilt_way_screen_title"
+        android:textSize="16sp"
+        app:autoSizeMaxTextSize="18sp"
+        app:autoSizeMinTextSize="16sp"
+        app:autoSizeTextType="uniform"
+        app:fontFamily="sans-serif"
         app:layout_constraintBottom_toTopOf="@id/hilt_to_normal_screen_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:layout_constraintVertical_chainStyle="spread_inside"/>
+        app:layout_constraintVertical_chainStyle="spread_inside" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/hilt_result_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/hilt_to_normal_screen_button"
+        app:layout_constraintEnd_toEndOf="@id/hilt_title_text_view"
+        app:layout_constraintStart_toStartOf="@id/hilt_title_text_view"
+        app:layout_constraintTop_toBottomOf="@id/hilt_title_text_view"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/hilt_to_normal_screen_button"
@@ -30,7 +47,7 @@
         android:layout_marginBottom="64dp"
         android:text="@string/hilt_go_to_normal_screen"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@id/hilt_to_normal_title_text_view"
-        app:layout_constraintStart_toStartOf="@id/hilt_to_normal_title_text_view"
-        app:layout_constraintTop_toBottomOf="@id/hilt_to_normal_title_text_view" />
+        app:layout_constraintEnd_toEndOf="@id/hilt_title_text_view"
+        app:layout_constraintStart_toStartOf="@id/hilt_title_text_view"
+        app:layout_constraintTop_toBottomOf="@id/hilt_title_text_view" />
 </androidx.constraintlayout.widget.ConstraintLayout>
